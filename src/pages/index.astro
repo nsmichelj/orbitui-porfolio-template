@@ -1,7 +1,22 @@
 ---
+import Contact from "@/components/sections/Contact.astro";
+import Experience from "@/components/sections/Experience.astro";
+import Hero from "@/components/sections/Hero.astro";
+import Projects from "@/components/sections/Projects.astro";
+import Skills from "@/components/sections/Skills.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout>
-  <h1>Portfolio</h1>
+  <div class="my-10 space-y-20">
+    <Hero />
+
+    <Projects />
+
+    <Skills />
+
+    <Experience />
+
+    <Contact />
+  </div>
 </Layout>
