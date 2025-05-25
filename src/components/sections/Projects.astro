@@ -1,0 +1,77 @@
+---
+import Section from "@/components/ui/Section.astro";
+import { Image } from "astro:assets";
+import { Badge } from "../ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "../ui/card";
+
+const title = "Featured Projects";
+const projects = [
+  {
+    name: "ShopNest",
+    description:
+      "An advanced e-commerce platform with product recommendations, secure payments, and admin dashboard.",
+    img: "/project1.png",
+    techStack: ["Next.js", "PostgreSQL", "Stripe API", "Tailwind CSS"],
+    repo: "https://github.com/example/shopnest",
+  },
+  {
+    name: "TaskFlow Pro",
+    description:
+      "A fullstack productivity app for managing tasks, deadlines, and team collaboration with real-time updates.",
+    img: "/project2.png",
+    techStack: ["Astro", "Express", "PostgreSQL"],
+    repo: "https://github.com/example/taskflow-pro",
+  },
+  {
+    name: "Evently",
+    description:
+      "A fullstack event management system supporting ticket sales, attendee check-in, and analytics.",
+    img: "/project3.png",
+    techStack: ["React", "Nest", "PostgreSQL"],
+    repo: "https://github.com/example/evently",
+  },
+];
+---
+
+<Section title={title}>
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full">
+    {
+      projects.map((project) => (
+        <a href={project.repo}>
+          <Card class="shadow-none overflow-hidden">
+            <CardHeader class="p-0">
+              <Image
+                src={project.img}
+                alt={project.name}
+                width="854"
+                height="480"
+                class="aspect-[16/9]"
+              />
+            </CardHeader>
+            <CardContent>
+              <CardTitle class="text-lg text-secondary-foreground mb-2">
+                {project.name}
+              </CardTitle>
+
+              <CardDescription class="mb-2">
+                {project.description}
+              </CardDescription>
+
+              <div class="flex flex-wrap gap-1">
+                {project.techStack.map((tech) => (
+                  <Badge>{tech}</Badge>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </a>
+      ))
+    }
+  </div>
+</Section>

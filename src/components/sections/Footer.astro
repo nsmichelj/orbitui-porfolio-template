@@ -1,0 +1,27 @@
+---
+import { Button } from "../ui/button";
+import SocialLinks from "./SocialLinks.astro";
+---
+
+<div class="p-4 border-t border-border">
+  <div class="container mx-auto flex justify-center items-center">
+    <div class="flex flex-col justify-center">
+      <SocialLinks />
+      <div
+        class="flex flex-col items-center justify-between gap-2 text-secondary-foreground font-semibold"
+      >
+        <p>&copy; 2025. Charles Babbage.</p>
+        <p class="text-base">
+          Created with
+          <Button
+            href="https://github.com/nsmichelj/orbitui"
+            target="_blank"
+            variant="link"
+            size="lg"
+            class="p-0 underline">OrbitUI</Button
+          >
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

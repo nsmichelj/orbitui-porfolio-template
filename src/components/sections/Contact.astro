@@ -1,0 +1,31 @@
+---
+import Section from "@/components/ui/Section.astro";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+
+const title = "Contact";
+---
+
+<Section title={title}>
+  <p class="mb-6 text-muted-foreground">
+    I'm always open to discussing new projects, creative ideas, or opportunities
+    to be part of your visions. Feel free to reach out!
+  </p>
+  <div class="max-w-md">
+    <div>
+      <Label for="name">Name</Label>
+      <Input id="name" name="name" placeholder="Your name" />
+    </div>
+
+    <div>
+      <Label for="email">Email</Label>
+      <Input id="email" name="email" placeholder="Your email" />
+    </div>
+
+    <div>
+      <Label>Message</Label>
+      <Textarea rows={4} placeholder="Your Message" />
+    </div>
+  </div>
+</Section>

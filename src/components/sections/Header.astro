@@ -1,0 +1,36 @@
+---
+import { Button } from "@/components/ui/button";
+
+const sections = [
+  {
+    label: "About",
+    href: "/",
+  },
+  {
+    label: "Projects",
+    href: "/",
+  },
+  {
+    label: "Contact",
+    href: "/",
+  },
+];
+---
+
+<div class="p-4 border-b border-border">
+  <div class="max-w-7xl mx-auto flex justify-between items-center">
+    <span class="font-bold text-lg"> Portfolio </span>
+
+    <div class="flex items-center justify-between gap-2">
+      {
+        sections.map((section) => (
+          <Button href={section.href} variant="link">
+            {section.label}
+          </Button>
+        ))
+      }
+
+      <Button> Resume </Button>
+    </div>
+  </div>
+</div>

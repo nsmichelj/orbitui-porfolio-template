@@ -1,0 +1,35 @@
+---
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import SocialLinks from "./SocialLinks.astro";
+---
+
+<div class="mx-auto max-w-3xl">
+  <div class="flex justify-center">
+    <Avatar class="size-40" bordered>
+      <AvatarImage
+        src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="Charles Babbage"
+        class="size-40"
+      />
+      <AvatarFallback> CB </AvatarFallback>
+    </Avatar>
+  </div>
+  <h1 class="font-bold text-center text-2xl">Charles Babbage</h1>
+  <div
+    class="text-base font-semibold text-center text-secondary-foreground mb-4"
+  >
+    <p>Full Stack Developer</p>
+    <p>London, United Kingdom</p>
+  </div>
+
+  <Button class="mx-auto"> Download CV </Button>
+
+  <p class="text-center font-semibold mt-4 text-foreground/70">
+    I'm a full stack developer specializing in building robust and scalable web
+    applications. With over 5 years of experience, I've helped numerous clients
+    create impactful digital experiences.
+  </p>
+
+  <SocialLinks />
+</div>

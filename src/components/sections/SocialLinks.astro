@@ -1,0 +1,41 @@
+---
+import GitHub from "@/assets/icons/github.svg";
+import LinkedInIcon from "@/assets/icons/linkedin.svg";
+import XIcon from "@/assets/icons/x.svg";
+
+import { Button } from "@/components/ui/button";
+
+const socialLinks = [
+  {
+    label: "LinkedIn",
+    href: "",
+    icon: LinkedInIcon,
+  },
+  {
+    label: "X",
+    href: "",
+    icon: XIcon,
+  },
+  {
+    label: "GitHub",
+    href: "",
+    icon: GitHub,
+  },
+];
+---
+
+<div class="flex justify-center gap-4 my-4">
+  {
+    socialLinks.map((socialLink) => (
+      <Button
+        href={socialLink.href}
+        variant="alternative"
+        rounded="full"
+        class="p-2"
+        aria-label={socialLink.label}
+      >
+        <socialLink.icon />
+      </Button>
+    ))
+  }
+</div>

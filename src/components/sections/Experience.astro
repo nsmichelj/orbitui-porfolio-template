@@ -1,0 +1,46 @@
+---
+import BriefcaseIcon from "@/assets/icons/briefcase.svg";
+import Section from "../ui/Section.astro";
+
+const title = "Experience";
+const experiences = [
+  {
+    role: "Full Stack Developer",
+    company: "Tech Innovations Inc.",
+    date: "2023 - Present",
+  },
+  {
+    role: "Frontend Developer",
+    company: "Creative Solutions LLC",
+    date: "2021 - 2023",
+  },
+  {
+    role: "Backend Developer",
+    company: "NextGen Software",
+    date: "2019 - 2021",
+  },
+];
+---
+
+<Section title={title}>
+  <ol class="relative border-s border-border ms-3">
+    {
+      experiences.map((experience) => (
+        <li class="mb-10 ms-6">
+          <span class="absolute flex items-center justify-center w-6 h-6 bg-secondary rounded-full -start-3 ring-8 ring-background">
+            <BriefcaseIcon class="size-4 text-foreground" />
+          </span>
+          <h3 class="mb-1 text-lg font-semibold text-secondary-foreground">
+            {experience.role}
+          </h3>
+          <p class="mb-1 text-base font-normal text-secondary-foreground">
+            {experience.company}
+          </p>
+          <time class="block mb-2 text-sm font-normal leading-none text-secondary-foreground">
+            {experience.date}
+          </time>
+        </li>
+      ))
+    }
+  </ol>
+</Section>

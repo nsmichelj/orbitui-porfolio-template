@@ -1,0 +1,28 @@
+---
+import { Badge } from "../ui/badge";
+import Section from "../ui/Section.astro";
+
+const title = "Skills";
+const skills = [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Express",
+  "Astro",
+  "HTML5",
+  "CSS3",
+  "Tailwind CSS",
+  "MongoDB",
+  "PostgreSQL",
+  "REST API",
+  "Git",
+];
+---
+
+<Section title={title}>
+  <div class="flex gap-2 flex-wrap">
+    {skills.map((skill) => <Badge>{skill}</Badge>)}
+  </div>
+</Section>
