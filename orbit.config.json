@@ -30,6 +30,10 @@
     {
       "name": "textarea",
       "version": "0.0.1"
+    },
+    {
+      "name": "alert",
+      "version": "0.0.1"
     }
   ]
 }
