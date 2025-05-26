@@ -1,12 +1,13 @@
 ---
 interface Props {
+  id?: string;
   title: string;
 }
 
-const { title } = Astro.props;
+const { id, title } = Astro.props;
 ---
 
-<div class="container mx-auto">
+<div class="container mx-auto" id={id}>
   <h2 class="font-bold text-2xl mb-4">{title}</h2>
   <slot />
 </div>
