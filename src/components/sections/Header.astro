@@ -23,13 +23,15 @@ const sections = [
     <span class="font-bold text-lg"> Portfolio </span>
 
     <div class="flex items-center justify-between gap-2">
-      {
-        sections.map((section) => (
-          <Button href={section.href} variant="link">
-            {section.label}
-          </Button>
-        ))
-      }
+      <div class="items-center justify-between gap-2 hidden sm:flex">
+        {
+          sections.map((section) => (
+            <Button href={section.href} variant="link">
+              {section.label}
+            </Button>
+          ))
+        }
+      </div>
 
       <Button> Resume </Button>
 
